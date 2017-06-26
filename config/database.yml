@@ -1,0 +1,18 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: <%= ENV["DATABASE_USERNAME"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
+
+development:
+  <<: *default
+  database: todos-api_development
+
+test:
+  <<: *default
+  database: todos-api_test
+
+production:
+  <<: *default
+  database: todos-api_production

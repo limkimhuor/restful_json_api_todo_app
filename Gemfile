@@ -59,3 +59,5 @@ group :development do
 end
 
 gem "dotenv-rails"
+gem "bcrypt", "~> 3.1.7"
+gem "jwt"
